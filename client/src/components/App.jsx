@@ -27,8 +27,8 @@ export default class Navigation extends Component{
                         <Link to='contact'><FaIconPack.FaEnvelope/></Link>
                     </div>
                     
-                        <Route path='/' component={ Profile } />
-                        <Route path='/profile' component={ Home } />
+                        <Route path='/' component={ Home } />
+                        <Route path='/profile' component={ Profile } />
                         <Route path='/projects' component={ Projects } />
                         <Route path='/education-and-experience' component={ Experience } />
                         <Route path='/skills' component={ Skills } />

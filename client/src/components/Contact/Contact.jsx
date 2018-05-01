@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function ContactForm(){
     return(
+        <div>
+        <h3>Like what you saw? Send me an email and or connect via social media!</h3>
         <form method="POST">
             <label htmlFor="name">Name</label>
             <input type="text" name="name" />
@@ -14,5 +16,6 @@ export default function ContactForm(){
         
             <input type="submit" />
       </form>
+        </div>
     )
 }
