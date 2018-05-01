@@ -1,0 +1,53 @@
+{
+  "name": "js-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:client": "webpack",
+    "build:server": "babel ./server/src -d ./server/lib",
+    "dev": "source ENV_VAR && concurrently -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch server/lib --delay 1\"",
+    "prepare": "npm run build:server",
+    "start": "npm run build:client && npm run build:server && npm run start:server",
+    "start:server": "node server/lib/index.js",
+    "watch:client": "webpack --watch",
+    "watch:server": "nodemon --watch server/lib --delay 1s",
+    "scss:watch": "node-sass --watch styles.scss styles.css",
+    "scss:compile": "node-sass styles.scss styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "node-sass": "^4.9.0",
+    "nodemailer": "^4.6.4",
+    "path": "^0.12.7",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-icons": "^2.2.7",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^4.6.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "concurrently": "^3.5.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "nodemon": "^1.17.3",
+    "postcss-loader": "^2.1.4",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack-cli": "^2.0.15"
+  }
+}

@@ -1,0 +1,84 @@
+.primary-font {
+    font-family: 'Quicksand', sans-serif;
+}
+.secondary-font{
+    font-family: 'Varela Round', sans-serif;
+}
+
+/*Navigatation bar & logo*/
+.navbar {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.7em;
+
+  }
+  
+.navbar > a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 20px; }
+
+.navbar > a:hover {
+    color: #000; }
+  
+.navbar a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #18b478b7;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+  
+.navbar > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+
+.hero{
+    text-align:center;
+    position:relative;
+    height: auto;
+    padding-bottom:80px;
+    background: rgba(56, 2, 66, 0.438);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-y2ihGn3WPpzRqoTN9tINztVKPKNPvFqD3xMuJgONmr4Sb65A);
+    background-image: linear-gradient(rgba(56, 2, 66, 0.726), rgba(130, 16, 175, 0.048)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-y2ihGn3WPpzRqoTN9tINztVKPKNPvFqD3xMuJgONmr4Sb65A);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#fff;
+    overflow:hidden;
+    }
+
+    h1{
+        margin:50px 0 20px;
+        font-family: sans-serif;
+        font-size:35px;
+    } 
+
+    span{
+        font: 700 60px/1;
+        display:block;
+      }
+
+    h2{
+      margin-left: auto;
+      margin-right: auto;
+      font-size:1em;
+      font-weight:400;
+      padding:20px;
+    }
+
+    .content{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .navbar-scroll{
+      background-color: rgba(255, 204, 0, 0.7)
+    }

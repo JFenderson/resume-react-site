@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+ENV_VAR
+client/dist
+server/lib
+**/*/ENV_VAR
