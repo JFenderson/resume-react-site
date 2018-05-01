@@ -1,11 +1,15 @@
 import nodemailer from 'nodemailer';
-import config from './config';
+import config from './config/index';
 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         type: 'OAuth2',
-        config
+        user: config.user,
+        clientId: config.clientId,
+        clientSecret: config.clientSecret,
+        refreshToken: config.refreshToken,
+        accessToken: config.accessToken
     }
 });
 
@@ -13,16 +17,20 @@ const send = ({ email, name, text }) => {
     const from = name && email ? `${name} <${email}` : `${name || email}`
     const message = {
         from,
-        to: 'fenderson.joseph@gmail.com',
+        to: process.env.USER,
         subject: `New Message from ${from} at resume-page`,
-        text,
+        text: `New Mail. ${name} Email: ${email}`,
         replyTo: from
     };
 
     return new Promise((resolve, reject)=> {
-        transporter.sendMail(message, (error, info)=> 
-            error ? reject(error) : resolve(info)
-        )
+        transporter.sendMail(message, (error, info)=> {
+            if(error) {
+                reject(error)
+                return 
+        } 
+        resolve(info)
+        })
     })
 }
 

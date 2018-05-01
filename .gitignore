@@ -4,3 +4,4 @@ ENV_VAR
 client/dist
 server/lib
 **/*/ENV_VAR
+source.json
