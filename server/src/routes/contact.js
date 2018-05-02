@@ -14,24 +14,26 @@ router.post('/', (req, res) => {
     console.log(req.body.name)
 
     var transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        service: 'gmail',
         auth: {
-            type: 'OAuth2',
-            user: config.user,
-            clientId: config.clientId,
-            clientSecret: config.clientSecret,
-            refreshToken: config.refreshToken,
-            accessToken: config.accessToken
+            user: 'joseph.fenderson@gmail.com',
+            pass: 'tori7784'
+            // type: 'OAuth2',
+            // user: config.user,
+            // clientId: config.clientId,
+            // clientSecret: config.clientSecret,
+            // refreshToken: config.refreshToken,
+            // accessToken: config.accessToken
         }
     });
 // const { email = '', name = '', message = '' } = req.body
-const name = req.body;
-const email = req.body;
-const message = req.body;
+const name = req.body.name;
+const email = req.body.email;
+const message = req.body.message;
 var from = `${name} <${email}>`
 var mailOption = {
     from: from,
-    to: 'joseph.fenderson@gamil.com',
+    to: 'joseph.fenderson@gmail.com',
     subject: `New Message from ${from} at resume-page`,
     text: `${message}`
 };
@@ -40,10 +42,8 @@ transporter.sendMail(mailOption,(error, info)=> {
     // console.log(info)
     if (error) {
         console.log(error);
-        res.sendStatus(400)
     } else {
         console.log('Message sent: ' + info.response);
-        res.sendStatus(200);
     }
 })
 
