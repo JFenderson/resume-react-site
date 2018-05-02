@@ -1,61 +1,68 @@
 import { Router } from 'express';
+import { sendEmail } from '../utils/mail';
 import mailer from '../mailer/index';
 import nodemailer from 'nodemailer';
-import config from '../mailer/config/index'
+// import config from '../mailer/config/source.json'
 
 const router = Router();
+
+// const auth ={
+//     type: 'OAuth2',
+//     apiKey: 'AIzaSyCKKMYjiZdpSKQZEYinnCmYHO8jqf-PmW8',
+//     user: 'joseph.fenderson@gmail.com',
+//     clientId: '740089731687-7pipbomm18s00o0774igr8g87v5v57k6.apps.googleusercontent.com',
+//     clientSecret: 'x9yeKyAWLkbL_n8ew23C6WdX',
+//     refreshToken: '1/29ofVkBWwX4o0mT2ptVYd9x55oIDE8BiGTEXdF7pO8w',
+// }
 
 router.get('/', (req, res) => {
     res.send('Server working. Please post at "/contact" to submit a message.')
   })
   
 router.post('/', (req, res) => {
-    // console.log(req)
-    console.log(req.body.name)
+    let messageBody = ` Name: ${req.body.name}
+                        Email: ${req.body.email}
+                        Message: ${req.body.message}`;
+    sendEmail('fenderson.joseph@gmail.com', 'no-reply@gmail.com', 'New Contact Form Submission', messageBody)
+        .then((res) => {
+            res.sendStatus(201);
+        }).catch((err) => {
+            next(err)
+        })
 
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'joseph.fenderson@gmail.com',
-            pass: 'tori7784'
-            // type: 'OAuth2',
-            // user: config.user,
-            // clientId: config.clientId,
-            // clientSecret: config.clientSecret,
-            // refreshToken: config.refreshToken,
-            // accessToken: config.accessToken
-        }
-    });
-// const { email = '', name = '', message = '' } = req.body
-const name = req.body.name;
-const email = req.body.email;
-const message = req.body.message;
-var from = `${name} <${email}>`
-var mailOption = {
-    from: from,
-    to: 'joseph.fenderson@gmail.com',
-    subject: `New Message from ${from} at resume-page`,
-    text: `${message}`
-};
+//     var transporter = nodemailer.createTransport({
+//         service: 'Gmail',
+//         auth: {
+//             type: 'OAuth2',
+//             user: 'joseph.fenderson@gmail.com',
+//             clientId: '740089731687-7pipbomm18s00o0774igr8g87v5v57k6.apps.googleusercontent.com',
+//             clientSecret: 'x9yeKyAWLkbL_n8ew23C6WdX',
+//             refreshToken: '1/29ofVkBWwX4o0mT2ptVYd9x55oIDE8BiGTEXdF7pO8w',
+//         }
+//     });
+// // const { email = '', name = '', message = '' } = req.body
+//     const name = req.body.name;
+//     const email = req.body.email;
+//     const message = req.body.message;
+//     var from = `${email}`
+//     var mailOption = {
+//         from: from,
+//         to: 'joseph.fenderson@gmail.com',
+//         subject: `New Message from ${from} at resume-page`,
+//         text: `${message}`,
+//         html: `<p>${message}</p>`
+//     };
 
-transporter.sendMail(mailOption,(error, info)=> {
-    // console.log(info)
-    if (error) {
-        console.log(error);
-    } else {
-        console.log('Message sent: ' + info.response);
-    }
-})
+//     transporter.sendMail(mailOption,(error, res)=> {
+//         // console.log(info)
+//         if (error) {
+//             console.log(error);
+//         } else {
+//             console.log(JSON.stringify(res));
+//         }
+//         transporter.close()
+//     });
 
-// mailer({ email, name, text: message })
-// .then(() => {
-//     console.log(`Sent the message "${message}" from <${name}> ${email}.`);
-//     res.redirect('/#success');
-// })
-// .catch((error) => {
-//     console.log(`Failed to send the message "${message}" from <${name}> ${email} with the error ${error && error.message}`);
-//     res.redirect('/#error');
-// })
 })
 
 export default router;
