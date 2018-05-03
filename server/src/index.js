@@ -7,6 +7,7 @@ import Router  from './routes';
 
 const app = express();
 const CLIENT_PATH = join(__dirname, '../../client');
+
 app.use(express.static(CLIENT_PATH));
 
 
