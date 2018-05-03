@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import styles from './skills.module.scss';
 
 export default class ImageGallery extends Component{
     render(){
