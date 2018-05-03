@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Link, HashRouter } from 'react-router-dom';
 import ReactRouter from 'react-router-dom';
 import * as FaIconPack from 'react-icons/lib/fa';
+import styles from './app.module.scss';
 import Home from './HomePage/Home';
 import Profile from './Profile/Profile';
 import Skills from './Skills/Skills';

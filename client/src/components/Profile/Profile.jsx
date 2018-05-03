@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as FaIconPack from 'react-icons/lib/fa';
+import styles from './profile.module.scss';
 
 
 export default class Profile extends Component{

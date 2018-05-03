@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import styles from './home.module.scss';
 import Profile from '../Profile/Profile';
 import Skills from '../Skills/Skills';
 import Experience from '../Experience/Experience';

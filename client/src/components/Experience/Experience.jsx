@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import styles from './experience.module.scss';
 
 export default class Experience extends Component{
     render(){

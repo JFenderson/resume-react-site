@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import styles from './landing.module.scss';
 
 export default class Landing extends Component{
     render(){
