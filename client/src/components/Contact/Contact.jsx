@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import styles from './contact.module.scss';
+import styles from './contact.scss';
 
 export default class ContactForm extends Component{
     constructor(){

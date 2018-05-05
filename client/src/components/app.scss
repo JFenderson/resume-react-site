@@ -1,0 +1,35 @@
+/* Navigatation bar & logo */
+.navbar {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.7em;
+
+  }
+  
+.navbar > a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 20px; }
+
+.navbar > a:hover {
+    color: #000; }
+  
+.navbar a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #18b478b7;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+  
+.navbar > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
