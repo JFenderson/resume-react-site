@@ -6,12 +6,11 @@ import styles from './profile.scss';
 export default class Profile extends Component{
     render(){
         return(
-            <div className={styles.profileBody}>
-                <section className="bio">
+            <div className={[styles.profileBody]}>
+                <section className={styles.bio}>
                     <h1>Joseph Fenderson</h1>
                     <p>Full-stack web developer from Montgomery, Al</p>
                     <p>Recent graduate of the <a href="http://http://www.innovatebham.com/">Innovate Birmingham</a> : I Am Bham Cohort certified by <a href="http://www.uab.edu/business/home/">UAB Collat School of Business</a> and powered by <a href="https://www.covalence.io/">Covalence</a>. </p>
-                    <img src="./images/G46A9193.jpg" alt="profile-pic-joseph-fenderson" width='200' height='250'/>
                 </section>
                 <div className="info">
                     <h4>AGE</h4>

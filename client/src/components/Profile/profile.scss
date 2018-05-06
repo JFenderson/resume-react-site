@@ -1,0 +1,20 @@
+.profileBody{
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../../../images/profilePic.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    position: relative;
+    justify-content: right;
+    .bio{
+        color: mintcream;
+        text-align: right;
+        p{
+            text-align: right;
+        }
+    }
+    // background: url('../../../images/profilePic.jpg') no-repeat cornflowerblue;
+    // background:url('../../../images/profilePic.jpg') repeat, #7abcff; /* Old browsers */
+    // background:url('../../../images/profilePic.jpg') repeat, -moz-linear-gradient(top,  #7abcff 0%, #4096ee 100%); /* FF3.6-15 */
+    // background:url('../../../images/profilePic.jpg') repeat, -webkit-linear-gradient(top,  #7abcff 0%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+    // background:url('../../../images/profilePic.jpg') repeat, linear-gradient(to bottom,  #7abcff 0%,#4096ee 100%);
+}
