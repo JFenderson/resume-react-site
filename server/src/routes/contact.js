@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { sendEmail } from '../utils/mail';
-import mailer from '../mailer/index';
+// import { sendEmail } from '../utils/mail';
+// import mailer from '../mailer/index';
 import nodemailer from 'nodemailer';
 // import config from '../mailer/config/source.json'
 
@@ -41,7 +41,7 @@ router.post('/', (req, res, next) => {
         if (error) {
             console.log(error);
         } else {
-            console.log(JSON.stringify(res));
+            res.sendStatus(201);
         }
         transporter.close()
     });

@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
+import * as animate from 'react-animations';
 import styles from './skills.module.scss';
 
-export default class ImageGallery extends Component{
+export default class Skills extends Component{
     render(){
         return(
             <section id="skills">
@@ -10,71 +11,71 @@ export default class ImageGallery extends Component{
                 <p>View my skills to see if I'd be a good fit for your project's needs.</p>
             </div>
             
-                <div className="skillsets">
-                    <div className="skillSet">
+                <div className={styles.content}>
+                    <div className={styles.skillSet}>
                         <h3>Web</h3>
                         <ul>
-                            <li className="skill">
-                                <div className="skillName">HTML 5</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>HTML 5</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">CSS 3</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>CSS 3</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">JavaScript(ES6 and Beyond)</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>JavaScript(ES6 and Beyond)</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">React</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>React</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Node.js</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Node.js</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Express.js</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Express.js</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Babel</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Babel</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Webpack</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Webpack</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">npm</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>npm</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">SASS</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>SASS</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Responsive Design</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Responsive Design</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Grid</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Grid</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Passport.js</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Passport.js</p>
                             </li>
                         </ul>
                     </div>
-                    <div className="skillSet">
+                    <div className={styles.skillSet}>
                         <h3>Tools</h3>
                         <ul>
-                            <li className="skill">
-                                <div className="skillName">Visual Studio Code</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Visual Studio Code</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Atom</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Atom</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">Git</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>Git</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">GitHub</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>GitHub</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">AWS</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>AWS</p>
                             </li>
-                            <li className="skill">
-                                <div className="skillName">MySQL</div>
+                            <li className={styles.grow}>
+                                <p className={styles.bubble}>MySQL</p>
                             </li>
                         </ul>
                     </div>

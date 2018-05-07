@@ -1,5 +1,13 @@
 .contactForm{
-    .text{
-    text-align: center;
-    }
+    background: rgba(10,10,10,0.5);
+        .text{
+        text-align: center;
+        font-size: 2em;
+        }
+        .form{
+            display: grid;
+            width: 50%;
+            margin: auto;
+            padding: 2em;
+        }
 }
