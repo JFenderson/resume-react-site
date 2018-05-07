@@ -2,18 +2,17 @@ import express  from 'express';
 import { join } from 'path';
 import bodyParser  from 'body-parser';
 import nodemailer  from 'nodemailer';
-import Router  from './routes';
+import routes  from './routes';
 
 
 const app = express();
 const CLIENT_PATH = join(__dirname, '../../client');
 
 app.use(express.static(CLIENT_PATH));
-
+app.use(express.json())
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use('/api', Router);
+app.use('/api', routes);
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
