@@ -10,7 +10,6 @@ export default class Skills extends Component{
                 <h3>Skills</h3>
                 <p>View my skills to see if I'd be a good fit for your project's needs.</p>
             </div>
-            
                 <div className={styles.content}>
                     <div className={styles.skillSet}>
                         <h3>Web</h3>

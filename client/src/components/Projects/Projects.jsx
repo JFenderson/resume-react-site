@@ -6,7 +6,7 @@ export default function Projects(){
         <div>
             <h1>Projects</h1>
             <p>These are the projects during my matriculation through the Innovate Birmingham course. I am currently developing projects as well.</p>
-            <div className="projects">
+            <div className={styles.projects}>
                 <div className="project">
                     <div className="card-header">Final Project – Family Function
                     </div> 
