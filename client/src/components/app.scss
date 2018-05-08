@@ -5,7 +5,9 @@
     display: flex;
     font-weight: bold;
     font-size: 1.7em;
-
+    padding: 0.7em;
+    justify-content: space-evenly;
+    background-color: cadetblue;
   }
   
 .navbar > a {
@@ -24,7 +26,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #18b478b7;
+    background-color: #dadddcb7;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);

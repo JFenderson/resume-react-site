@@ -35,10 +35,12 @@ export default class Navigation extends Component{
             this.setState({
                 scrollingLock: true
             });
+            console.log('moving')
         }else if(window.scrollY < 100){
             this.setState({
                 scrollingLock: false
             });
+            console.log('not moving')
         }
     }
 
@@ -47,7 +49,7 @@ export default class Navigation extends Component{
         return(
             <Router>
                 <Fragment>
-                    <div className={styles.navbar}>
+                    <div className={styles.navbar} onScroll={this.handleScroll}>
                         <Link to='/'><FaIconPack.FaHome/></Link>
                         <Link to='/profile'><FaIconPack.FaUser/></Link>
                         <Link to='/projects'><FaIconPack.FaBriefcase/></Link>
