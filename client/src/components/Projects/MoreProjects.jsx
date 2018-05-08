@@ -1,41 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
 import styles from './projects.scss';
 
-export default function Projects(){
-    return(
-        <div>
-            <h1>Projects</h1>
-            <p>These are the projects during my matriculation through the Innovate Birmingham course. I am currently developing projects as well.</p>
-            <div className={styles.projects}>
-                <div className="project">
-                    <div className="card-header">Final Project – Family Function
-                    </div> 
-                    <div className="card-body">
-                    <p>Website aimed towards connecting families without the help of social media.</p> 
-                    <p>My Responsibilities</p>
-                    <p>
-                        My contribution to this project was setting up the Photo Gallery, User profile, database to hold the images (AWS S3 & MySQL), setting up the Node to connect with both the MySQL and S3 database.  
-                    </p>
-                        <p>Technologies Used</p>
-                        <p>HTML, CSS, JavaScript, React JS, Node JS, AWS(S3), MySQL </p>
-                    </div>
-                </div>
+export default class MoreProjects extends Component{
+    render(){
+        return(
+            <div>
                 <div className="project">
                     <div className="card-header">
-                    DBLab- Blog Project
-                    </div>
-                    <div className="card-body">
-                        <p>React based app to showcase message posting.</p>
-                        <p>My Responsibilities</p>
-                        <p>I created a server and client side of this react app using MySQL database, stripe payment system, a mailing system, a JavaScript compiler, node server routing and authentication</p>
-                        <p>Technologies Used</p>
-                        <p>HTML, CSS, JavaScript, React JS, Node JS, MySQL, Passport JS, Stripe, Mailgun JS, Babel JS, Express JS</p>
-                    </div>
-                </div>
-                <div className="project">
-                    <div className="card-header">
-                    Chirper
+                        Chirper
                     </div>
                     <div className="card-body">
                         <p>Create a front-end app using React.</p>
@@ -47,7 +19,7 @@ export default function Projects(){
                 </div>
                 <div className="project">
                     <div className="card-header">
-                    API-React
+                        API-React
                     </div>
                     <div className="card-body">
                         <p>Create a app that display people and film from a web API.</p>
@@ -59,7 +31,7 @@ export default function Projects(){
                 </div>
                 <div className="project">
                     <div className="card-header">
-                    TypeWriter
+                        TypeWriter
                     </div>
                     <div className="card-body">
                         <p>Create a typing game using only jQuery.</p>
@@ -72,7 +44,7 @@ export default function Projects(){
                 </div>
                 <div className="project">
                     <div className="card-header">
-                    Promise-Lab
+                        Promise-Lab
                     </div>
                     <div className="card-body">
                         <p>Showcasing the use of Promises in asynchronous JavaScript</p>
@@ -84,7 +56,7 @@ export default function Projects(){
                 </div>
                 <div className="project">
                     <div className="card-header">
-                    99-Lines
+                        99-Lines
                     </div>
                     <div className="card-body">
                         <p>Creating the lyrics of a song while implementing JavaScript concept of loops and conditional statements such the ‘’for loop’’.</p>
@@ -96,7 +68,7 @@ export default function Projects(){
                 </div>
                 <div className="project">
                     <div className="card-header">
-                    DOM-DOM-DOM
+                        DOM-DOM-DOM
                     </div>
                     <div className="card-body">
                         <p>Create squares when clicked and deleted when double-clicked using DOM manipulation in JavaScript </p>
@@ -108,7 +80,7 @@ export default function Projects(){
                 </div>
                 <div className="project">
                     <div className="card-header">
-                    Resume
+                        Resume
                     </div>
                     <div className="card-body">
                         <p>Creating a professional resume using HTML and CSS. This was the first project during class. </p>
@@ -118,7 +90,8 @@ export default function Projects(){
                         <p>HTML, CSS</p>
                     </div>
                 </div>
+
             </div>
-        </div>
-    )
+        )
+    }
 }

@@ -8,14 +8,21 @@ export default class Interest extends Component{
                 <h2>Interests and Future Goals</h2>
                 <p>I am always ready to learn new thing and explore different opportunities</p>
                 <h3>My Interests</h3>
-                <ul>
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                {/* <ul>
                     <li><div>Cyber Security</div></li>
                     <li><div>Automation Programming</div></li>
                     <li><div>Machine Learning</div></li>
                     <li><div>Cloud Computing</div></li>
                     <li><div>UI/UX Programming</div></li>
                     <li><div></div></li>
-                </ul>
+                </ul> */}
                 <h3>My Goals</h3>
                 <ul>
                     <li>Learn C#</li>
