@@ -13,7 +13,6 @@ export default class Interest extends Component{
                     <span></span>
                     <span></span>
                     <span></span>
-                    <span></span>
                 </div>
                 {/* <ul>
                     <li><div>Cyber Security</div></li>
