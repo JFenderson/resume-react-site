@@ -1,13 +1,30 @@
 @import '../index';
 
+.container{
+    margin-left: 17em;
+    position: relative;
+}
+
 /* Navigatation bar & logo */
 .navbar {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    float: left;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
     font-weight: bold;
-    font-size: 1.7em;
+    font-size: 2.5em;
     padding: 0.7em;
-    justify-content: space-evenly;
+    justify-content: baseline;
     background-color: cadetblue;
+    span{
+        img{
+            width: 100%;
+        }
+
+    }
   }
   
 .navbar > a {

@@ -50,6 +50,9 @@ export default class Navigation extends Component{
             <Router>
                 <Fragment>
                     <div className={styles.navbar} onScroll={this.handleScroll}>
+                    <span>
+                        <img src="../images/profilePic.jpg" alt="profilePic"/>
+                    </span>
                         <Link to='/'><FaIconPack.FaHome/></Link>
                         <Link to='/profile'><FaIconPack.FaUser/></Link>
                         <Link to='/projects'><FaIconPack.FaBriefcase/></Link>
@@ -58,7 +61,7 @@ export default class Navigation extends Component{
                         <Link to='/education-and-experience'><FaIconPack.FaGraduationCap/></Link>
                         <Link to='contact'><FaIconPack.FaEnvelope/></Link>
                     </div>
-                    <div>
+                    <div className={styles.container}>
                         <Route path='/' component={ Home } />
                         <Route path='/profile' component={ Profile } />
                         <Route path='/projects' component={ Projects } />

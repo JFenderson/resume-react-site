@@ -1,15 +1,15 @@
 .profileBody{
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../../../images/profilePic.jpg");
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5));
     background-size: contain;
     background-repeat: no-repeat;
     display: grid;
     position: relative;
-    justify-content: right;
+    // justify-content: right;
     .bio{
         color: mintcream;
-        text-align: right;
+        text-align: center;
         p{
-            text-align: right;
+            text-align: center;
         }
     }
     // background: url('../../../images/profilePic.jpg') no-repeat cornflowerblue;

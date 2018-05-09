@@ -12,7 +12,7 @@ export default class Home extends Component{
     render(){
         return(
             <Fragment>
-                <Landing />
+                {/* <Landing /> */}
                 <Profile />
                 <Experience />
                 <Projects />
