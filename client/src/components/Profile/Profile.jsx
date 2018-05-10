@@ -9,24 +9,16 @@ export default class Profile extends Component{
             <div className={[styles.profileBody]}>
                 <section className={styles.bio}>
                     <h1>Joseph Fenderson</h1>
-                    <p>Full-stack web developer from Montgomery, Al</p>
-                    <p>Recent graduate of the <a href="http://http://www.innovatebham.com/">Innovate Birmingham</a> : I Am Bham Cohort certified by <a href="http://www.uab.edu/business/home/">UAB Collat School of Business</a> and powered by <a href="https://www.covalence.io/">Covalence</a>. </p>
+                    <p>Fairfield, Al 35064</p>
+                    <p>(205)396-7054</p>
+                    <p>fenderson.joseph@gmail.com</p>
+
                 </section>
-                <div className="info">
-                    <h4>AGE</h4>
-                    <h3>26</h3>
-                    <h4>PHONE</h4>
-                    <h3>205-396-7054</h3>
-                    <h4>E-MAIL</h4>
-                    <h3>fenderson.joseph@gmail.com</h3>
-                </div>
                 <div className="icons">
-                    <a href="#"><img src="./images/facebook logo png transparent background.png" alt="facebook-logo" width='50' height='50'/></a>
-                    <a href="#"><img src="./images/GitHub.png" alt="github-logo" width='50' height='50' /></a>
-                    <a href="#"><img src="./images/linkdin.png" alt="linkedin-logo" width='50' height='50' /></a>
+                    <a href="#"><FaIconPack.FaFacebook/></a>
+                    <a href="#"><FaIconPack.FaGithub/></a>
+                    <a href="#"><img src="./images/linkedin_circle.png" alt="linkedin-logo" width='50' height='50' /></a>
                 </div>
-                <a href="#"><button>Contact Me</button></a>
-                <a href="#"><button>Learn More <FaIconPack.FaArrowDown/></button></a>
             </div>
         )
     }

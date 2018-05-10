@@ -9,6 +9,7 @@ import Profile from './Profile/Profile';
 import Skills from './Skills/Skills';
 import Experience from './Experience/Experience';
 import Projects from './Projects/Projects';
+import MoreProjects from './Projects/MoreProjects';
 import Interests from './Interests/Interests';
 import Landing from './LandingPage/Landing';
 import Contact from './Contact/Contact';
@@ -65,6 +66,7 @@ export default class Navigation extends Component{
                         <Route path='/' component={ Home } />
                         <Route path='/profile' component={ Profile } />
                         <Route path='/projects' component={ Projects } />
+                        <Route path='/moreProjects' component={MoreProjects} />
                         <Route path='/education-and-experience' component={ Experience } />
                         <Route path='/skills' component={ Skills } />
                         <Route path='/interests-and-goals' component={ Interests } />

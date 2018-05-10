@@ -3,10 +3,13 @@ const path = require('path');
 const CLIENT_DEST = path.join(__dirname, './client/dist');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const bundleExtractPLugin = new ExtractTextPlugin({filename: 'css/bundle.css'});
+const bundleExtractPlugin = new ExtractTextPlugin({filename: 'css/bundle.css'});
 const vendorsExtractPlugin = new ExtractTextPlugin({
     filename: 'css/vendors.css', allChunks: true
     });
+const svgExtractPlugin = new ExtractTextPlugin({
+    filename: 'css/devicon.css', allChunks: true
+});
 
 module.exports = {
     mode: 'development',
@@ -67,6 +70,41 @@ module.exports = {
                 })
             },
             // {
+            //     test: /\.(eot|svg|ttf|woff|woff2)$/,
+            //     loader: 'file-loader'
+            // },
+            // { 
+            //     test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+            //     use:[ 'url-loader?limit=100000', 'file-loader'] 
+            // },
+            {
+                test: /\.svg$/,
+                use: ExtractTextPlugin.extract({
+                    // fallback: 'style-loader',
+                    use: [
+                      {
+                        loader: "babel-loader"
+                      },
+                      {
+                        loader: "react-svg-loader",
+                        options: {
+                          jsx: true // true outputs JSX tags
+                        }
+                      },
+                      {
+                          loader: 'url-loader?limit=100000'
+                      },
+                      {
+                          loader: 'file-loader',
+                          options: {
+                              name: '[name].[ext]',
+                              outputPath: 'icons/'
+                          }
+                      }
+                    ]
+                })
+              },
+            // {
             //     test: /\.module.scss$/,
             //     use: ExtractTextPlugin.extract({
             //         fallback: 'style-loader',
@@ -108,6 +146,9 @@ module.exports = {
                     /\.(js|jsx)$/,
                     /\.css$/,
                     /\.scss$/,
+                    /\.svg$/
+                    // /\.(png|woff|woff2|eot|ttf|svg)$/,
+                    // /\.(eot|svg|ttf|woff|woff2)$/
                     // /\.module.scss$/
                 ],
                 loader: require.resolve('file-loader'),
@@ -126,7 +167,7 @@ module.exports = {
     ,
     plugins: [
         new ExtractTextPlugin({ filename: 'index.css', allChunks: true }),
-        bundleExtractPLugin
+        // svgExtractPlugin
         // new CopyWebpackPlugin([
         //     {from:'client/src/images',to:'images'} 
         // ])

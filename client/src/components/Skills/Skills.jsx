@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import * as animate from 'react-animations';
 import styles from './skills.module.scss';
+import IconBabel from 'react-devicon/babel/original';
+import IconBootstrap from 'react-devicon/bootstrap/plain';
+import IconCss3 from 'react-devicon/css3/plain';
+
 
 export default class Skills extends Component{
     render(){
@@ -13,6 +17,18 @@ export default class Skills extends Component{
                 <div className={styles.content}>
                     <div className={styles.skillSet}>
                         <h3>Web</h3>
+                        <ul>
+                            <li className={styles.skillLink}><a href="#"><IconBabel/></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"></a></li>
+
+                        </ul>
                         <ul>
                             <li className={styles.grow}>
                                 <p className={styles.bubble}>HTML 5</p>
