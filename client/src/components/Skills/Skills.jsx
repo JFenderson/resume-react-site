@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import * as animate from 'react-animations';
 import styles from './skills.module.scss';
-import IconBabel from 'react-devicon/babel/original';
-import IconBootstrap from 'react-devicon/bootstrap/plain';
-import IconCss3 from 'react-devicon/css3/plain';
-
+import * as FaIconPack from 'react-icons/lib/fa';
+import * as IoIconPack from 'react-icons/lib/io';
+import IconBabel from '-!react-svg-loader!../../utils/devicon-master/icons/babel/babel-original.svg';
+import IconHtml from '-!react-svg-loader!../../utils/devicon-master/icons/bootstrap/bootstrap-plain.svg';
+// import IconAmazonwebservices from '-!react-svg-loader!../../utils/devicon-master/icons/amazonwebservices/amazonewebservices-original.svg';
 
 export default class Skills extends Component{
     render(){
@@ -18,8 +19,8 @@ export default class Skills extends Component{
                     <div className={styles.skillSet}>
                         <h3>Web</h3>
                         <ul>
-                            <li className={styles.skillLink}><a href="#"><IconBabel/></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
+                            <li className={styles.skillLink}><a href="#"><IconBabel width={100} height={100}/></a></li>
+                            <li className={styles.skillLink}><a href="#"><IconHtml width={100} height={100}/></a></li>
                             <li className={styles.skillLink}><a href="#"></a></li>
                             <li className={styles.skillLink}><a href="#"></a></li>
                             <li className={styles.skillLink}><a href="#"></a></li>

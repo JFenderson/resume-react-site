@@ -11,6 +11,11 @@ const svgExtractPlugin = new ExtractTextPlugin({
     filename: 'css/devicon.css', allChunks: true
 });
 
+const iconExtractPlugin = new ExtractTextPlugin({
+    filename: 'icons/svg',
+    allChunks: true
+})
+
 module.exports = {
     mode: 'development',
     entry: ['./client/src/index.js', './client/src/index.scss'],
@@ -69,86 +74,57 @@ module.exports = {
                     ]
                 })
             },
-            // {
-            //     test: /\.(eot|svg|ttf|woff|woff2)$/,
-            //     loader: 'file-loader'
-            // },
-            // { 
-            //     test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
-            //     use:[ 'url-loader?limit=100000', 'file-loader'] 
-            // },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader'
+            },
+            { 
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+                use:[ 'url-loader?limit=100000', 'file-loader'] 
+            },
             {
                 test: /\.svg$/,
-                use: ExtractTextPlugin.extract({
-                    // fallback: 'style-loader',
+                use: iconExtractPlugin.extract({
                     use: [
-                      {
+                        {
                         loader: "babel-loader"
-                      },
-                      {
+                        },
+                        {
                         loader: "react-svg-loader",
                         options: {
-                          jsx: true // true outputs JSX tags
+                            jsx: true // true outputs JSX tags
                         }
-                      },
-                      {
-                          loader: 'url-loader?limit=100000'
-                      },
-                      {
-                          loader: 'file-loader',
-                          options: {
-                              name: '[name].[ext]',
-                              outputPath: 'icons/'
-                          }
-                      }
-                    ]
+                        },
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 100000,
+                                mimetype: 'image/svg'
+                            }
+                        },
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[path][name].[ext]'
+                            }
+                        }
+                    ]    
                 })
+
               },
-            // {
-            //     test: /\.module.scss$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: 'style-loader',
-            //         use: [
-            //             {
-            //                 loader: 'css-loader',
-            //                 options: {
-            //                     modules: true,
-            //                     sourceMap: true,
-            //                     importLoaders: 2,
-            //                     localIdentName: '[name]__[local]__[hash:base64:5]'
-            //                 }
-            //             },
-            //             'sass-loader'
-            //         ]
-            //     })
-            // },
-            // {
-            //     test: /^((?!\.module).)*scss$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: 'style-loader',
-            //         use: [
-            //             {
-            //                 loader: 'css-loader',
-            //                 options: {
-            //                     modules: true,
-            //                     sourceMap: true,
-            //                     importLoaders: 2,
-            //                     localIdentName: '[local]'
-            //                 }
-            //             },
-            //             'sass-loader'
-            //         ]
-            //     })
-            // },
+              {
+                test: /\.inline\.svg$/,
+                loader: require.resolve('svg-react-loader')
+              },
             {
                 exclude: [
                     /\.html$/,
                     /\.(js|jsx)$/,
                     /\.css$/,
                     /\.scss$/,
-                    /\.svg$/
-                    // /\.(png|woff|woff2|eot|ttf|svg)$/,
-                    // /\.(eot|svg|ttf|woff|woff2)$/
+                    /\.svg$/,
+                    /\.(png|woff|woff2|eot|ttf|svg)$/,
+                    /\.(eot|svg|ttf|woff|woff2)$/
                     // /\.module.scss$/
                 ],
                 loader: require.resolve('file-loader'),
@@ -167,6 +143,7 @@ module.exports = {
     ,
     plugins: [
         new ExtractTextPlugin({ filename: 'index.css', allChunks: true }),
+        bundleExtractPlugin
         // svgExtractPlugin
         // new CopyWebpackPlugin([
         //     {from:'client/src/images',to:'images'} 
