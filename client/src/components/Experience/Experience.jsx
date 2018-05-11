@@ -4,7 +4,7 @@ import styles from './experience.module.scss';
 export default class Experience extends Component{
     render(){
         return(
-            <div className={styles.content}>
+            <div className={styles.education}>
                 <h2>Education</h2>
                 <div className={styles.innovate}>
                     <h4>Innovate Birmingham</h4>

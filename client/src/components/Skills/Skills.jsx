@@ -4,8 +4,22 @@ import styles from './skills.module.scss';
 import * as FaIconPack from 'react-icons/lib/fa';
 import * as IoIconPack from 'react-icons/lib/io';
 import IconBabel from '-!react-svg-loader!../../utils/devicon-master/icons/babel/babel-original.svg';
-import IconHtml from '-!react-svg-loader!../../utils/devicon-master/icons/bootstrap/bootstrap-plain.svg';
-// import IconAmazonwebservices from '-!react-svg-loader!../../utils/devicon-master/icons/amazonwebservices/amazonewebservices-original.svg';
+import IconBootstrap from '-!react-svg-loader!../../utils/devicon-master/icons/bootstrap/bootstrap-plain.svg';
+import IconAmazonwebservices from '-!react-svg-loader!../../utils/devicon-master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg';
+import IconCss3 from '-!react-svg-loader!../../utils/devicon-master/icons/css3/css3-plain.svg';
+import IconDevicon from '-!react-svg-loader!../../utils/devicon-master/icons/devicon/devicon-plain.svg';
+import IconExpress from '-!react-svg-loader!../../utils/devicon-master/icons/express/express-original.svg';
+import IconGit from '-!react-svg-loader!../../utils/devicon-master/icons/git/git-original.svg';
+import IconGithub from '-!react-svg-loader!../../utils/devicon-master/icons/github/github-original.svg';
+import IconHtml from '-!react-svg-loader!../../utils/devicon-master/icons/html5/html5-plain.svg';
+import IconJs from '-!react-svg-loader!../../utils/devicon-master/icons/javascript/javascript-plain.svg'
+import IconJQuery from '-!react-svg-loader!../../utils/devicon-master/icons/jquery/jquery-plain.svg';
+import IconMysql from '-!react-svg-loader!../../utils/devicon-master/icons/mysql/mysql-plain.svg';
+import IconNode from '-!react-svg-loader!../../utils/devicon-master/icons/nodejs/nodejs-plain.svg';
+import IconReact from '-!react-svg-loader!../../utils/devicon-master/icons/react/react-original.svg';
+import IconSass from '-!react-svg-loader!../../utils/devicon-master/icons/sass/sass-original.svg';
+import IconVSCode from '-!react-svg-loader!../../utils/devicon-master/icons/visualstudio/visualstudio-plain.svg';
+import IconWebpack from '-!react-svg-loader!../../utils/devicon-master/icons/webpack/webpack-plain.svg';
 
 export default class Skills extends Component{
     render(){
@@ -18,18 +32,25 @@ export default class Skills extends Component{
                 <div className={styles.content}>
                     <div className={styles.skillSet}>
                         <h3>Web</h3>
-                        <ul>
-                            <li className={styles.skillLink}><a href="#"><IconBabel width={100} height={100}/></a></li>
-                            <li className={styles.skillLink}><a href="#"><IconHtml width={100} height={100}/></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
-                            <li className={styles.skillLink}><a href="#"></a></li>
+                        
+                            <span className={[styles.grow,styles.skillLink]}><a href="#"><IconBabel width={50} height={50}/></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconHtml width={50} height={50}/></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconAmazonwebservices width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconBootstrap width={50} height={50}/></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconCss3 width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconExpress width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconGit width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconGithub width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconJQuery width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconJs width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconMysql width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconNode width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconReact width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconSass width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconVSCode width={50} height={50} /></a></span>
+                            <span className={[styles.skillLink, styles.grow]}><a href="#"><IconWebpack width={50} height={50} /></a></span>
 
-                        </ul>
+                        
                         <ul>
                             <li className={styles.grow}>
                                 <p className={styles.bubble}>HTML 5</p>
